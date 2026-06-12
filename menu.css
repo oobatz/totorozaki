@@ -1254,7 +1254,7 @@ img {
     position: relative;
     left: auto;
     top: auto;
-    width: min(340px, calc(100vw - 32px));
+    width: 100%;
     max-width: 100%;
     height: auto;
     min-height: 0;
