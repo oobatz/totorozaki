@@ -1,0 +1,31 @@
+<svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_16_1500)">
+<path d="M6.06274 6.08727C8.1057 5.88298 11.3116 6.85911 12.6322 11.0629M12.6322 11.0629C13.0912 12.5241 13.3225 14.3751 13.1979 16.7021C13.1475 17.6449 12.8629 18.6924 12.8629 19.8534C12.8629 20.8465 13.6755 21.9121 16.3459 22.4003C17.288 22.5726 18.4614 22.673 19.9119 22.673C21.3657 22.673 23.2924 22.7477 24.8876 22.4197C26.2041 22.1491 27.2947 21.6042 27.7072 20.5168M12.6322 11.0629C18.926 11.0629 22.8812 11.0629 28.4535 11.0629M31.6877 11.0629C30.5399 11.0629 29.4698 11.0629 28.4535 11.0629M28.4535 11.0629V15.3752C28.4535 17.2826 27.5413 17.6973 25.3022 17.6973C21.4875 17.6973 16.6776 18.029 13.1979 16.7021M16.3459 22.4003L15.3508 25.7413M24.8876 22.4197L25.9657 25.7413" stroke="#F645F9" stroke-width="3.75" stroke-linecap="round"/>
+</g>
+<g filter="url(#filter1_f_16_1500)">
+<circle cx="14.8524" cy="27.8957" r="1.99029" stroke="#F645F9" stroke-width="3.75" stroke-linecap="round"/>
+</g>
+<g filter="url(#filter2_f_16_1500)">
+<circle cx="26.2967" cy="27.8957" r="1.99029" stroke="#F645F9" stroke-width="3.75" stroke-linecap="round"/>
+</g>
+<path d="M6.06274 6.08727C8.1057 5.88298 11.3116 6.85911 12.6322 11.0629M12.6322 11.0629C13.0912 12.5241 13.3225 14.3751 13.1979 16.7021C13.1475 17.6449 12.8629 18.6924 12.8629 19.8534C12.8629 20.8465 13.6755 21.9121 16.3459 22.4003C17.288 22.5726 18.4614 22.673 19.9119 22.673C21.3657 22.673 23.2924 22.7477 24.8876 22.4197C26.2041 22.1491 27.2947 21.6042 27.7072 20.5168M12.6322 11.0629C18.926 11.0629 22.8812 11.0629 28.4535 11.0629M31.6877 11.0629C30.5399 11.0629 29.4698 11.0629 28.4535 11.0629M28.4535 11.0629V15.3752C28.4535 17.2826 27.5413 17.6973 25.3022 17.6973C21.4875 17.6973 16.6776 18.029 13.1979 16.7021M16.3459 22.4003L15.3508 25.7413M24.8876 22.4197L25.9657 25.7413" stroke="white" stroke-width="1.5625" stroke-linecap="round"/>
+<circle cx="14.8524" cy="27.8957" r="1.99029" stroke="white" stroke-width="1.5625"/>
+<circle cx="26.2967" cy="27.8957" r="1.99029" stroke="white" stroke-width="1.5625"/>
+<defs>
+<filter id="filter0_f_16_1500" x="0" y="0" width="37.7502" height="31.8043" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.09375" result="effect1_foregroundBlur_16_1500"/>
+</filter>
+<filter id="filter1_f_16_1500" x="6.79956" y="19.8429" width="16.1055" height="16.1056" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.09375" result="effect1_foregroundBlur_16_1500"/>
+</filter>
+<filter id="filter2_f_16_1500" x="18.2439" y="19.8429" width="16.1055" height="16.1056" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.09375" result="effect1_foregroundBlur_16_1500"/>
+</filter>
+</defs>
+</svg>

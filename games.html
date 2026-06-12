@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТОТОРОЗАКИ — Игры</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Unbounded:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-inner-body">
+
+  <div class="bg-blur-overlay"></div>
+
+  <!-- Шапка -->
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="logo-mascot small">
+          <img src="img/svg полный логотип .svg">
+        </div>
+      </a>
+      <nav class="nav-panel">
+        <div class="nav-panel-inner">
+          <a href="games.html" class="nav-btn" title="Игры">
+            <img src="img/svg игры кнопка .svg">
+          </a>
+          <button class="nav-btn" id="nav-waiter" title="Вызов официанта" onclick="showWaiterModal()">
+            <img src="img/svg вызов официанта кнопка.svg">
+          </button>
+          <a href="cart.html" class="nav-btn" title="Корзина" style="position:relative">
+            <span class="cart-badge" id="cart-badge" style="display:none">0</span>
+            <img src="img/svg корзина кнопка .svg">
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Игры -->
+  <div class="games-content">
+    <div class="games-panel">
+      <h2 class="games-title">ИГРОВАЯ ЗОНА</h2>
+      <div class="games-grid">
+        <button class="game-card" onclick="openGame('2048')">
+          <img class="game-preview" src="img/game-2048.png" alt="" draggable="false">
+          <div class="game-icon"><div class="game-2048-icon"><div>1 2</div><div>3 4</div></div></div>
+          <div class="game-name">2048</div>
+          <div class="game-desc">Складывай числа до 2048</div>
+        </button>
+        <button class="game-card" onclick="openGame('tetris')">
+          <img class="game-preview" src="img/game-tetris.png" alt="" draggable="false">
+          <div class="game-icon">✕</div>
+          <div class="game-name">Тетрис</div>
+          <div class="game-desc">Классическая головоломка</div>
+        </button>
+        <button class="game-card" onclick="openGame('snake')">
+          <img class="game-preview" src="img/game-snake.png" alt="" draggable="false">
+          <div class="game-icon">🐍</div>
+          <div class="game-name">Змейка</div>
+          <div class="game-desc">Вырасти свою змейку</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модалки -->
+  <div id="modal-waiter" class="modal-overlay hidden" onclick="closeModal('modal-waiter')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-icon">
+        <img src="img/иконка офик.png">
+      </div>
+      <h3 class="modal-title">Официант вызван</h3>
+      <p class="modal-text">Официант скоро подойдет к вашему столику. Пожалуйста, ожидайте!</p>
+      <button class="modal-btn" onclick="closeModal('modal-waiter')">Хорошо</button>
+    </div>
+  </div>
+
+  <div id="modal-game" class="modal-overlay hidden">
+    <div class="modal-box game-modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal('modal-game')">✕</button>
+      <div id="game-container"></div>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="games.js"></script>
+</body>
+</html>

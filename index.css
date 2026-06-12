@@ -1,0 +1,317 @@
+:root {
+  --frame-ratio: 16 / 9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #100b25;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.viewport {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  background: #100b25;
+}
+
+.stage {
+  position: relative;
+  width: max(100vw, calc(100vh * var(--frame-ratio)));
+  width: max(100vw, calc(100svh * var(--frame-ratio)));
+  aspect-ratio: var(--frame-ratio);
+  overflow: hidden;
+  background: #ffffff;
+  container-type: inline-size;
+}
+
+.background,
+.wash,
+.logo-glow,
+.text-glow,
+.logo-word,
+.logo-mark,
+.welcome-text,
+.order-hitbox,
+.food-icon {
+  position: absolute;
+}
+
+.background {
+  inset: 0;
+  width: 100cqw;
+  height: 56.25cqw;
+}
+
+.background img {
+  position: absolute;
+  left: -1.56cqw;
+  top: 0;
+  width: 103.12cqw;
+  height: 56.25cqw;
+  max-width: none;
+  object-fit: fill;
+}
+
+.wash {
+  inset: 0;
+  width: 100cqw;
+  height: 56.25cqw;
+  background: linear-gradient(180deg, rgba(88, 255, 239, 0.33) 0%, rgba(246, 69, 249, 0.33) 100%);
+  backdrop-filter: blur(7.2px);
+}
+
+.logo-glow {
+  left: 10.25cqw;
+  top: 15.4167cqw;
+  width: 79.5cqw;
+  height: 15.0833cqw;
+  border-radius: 13.8333cqw;
+  background:
+    radial-gradient(ellipse at center, rgba(126, 85, 199, 0.2) 0%, rgba(74, 53, 120, 0.08) 48%, rgba(43, 23, 77, 0) 78%),
+    linear-gradient(180deg, rgba(235, 235, 235, 0.018) 0%, rgba(74, 53, 120, 0.05) 27.037%, rgba(43, 23, 77, 0.03) 100%);
+  filter: blur(2.9167cqw);
+  opacity: 0.58;
+  pointer-events: none;
+}
+
+.text-glow {
+  left: 0;
+  top: 32.25cqw;
+  width: 100cqw;
+  height: 21.25cqw;
+  border-radius: 5cqw;
+  background:
+    radial-gradient(ellipse at center, rgba(72, 45, 118, 0.28) 0%, rgba(56, 31, 101, 0.13) 54%, rgba(43, 23, 77, 0.02) 100%),
+    linear-gradient(180deg, rgba(235, 235, 235, 0.01) 0%, rgba(74, 53, 120, 0.07) 27.037%, rgba(43, 23, 77, 0.04) 100%);
+  filter: blur(1cqw);
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.logo-word {
+  left: 13.6cqw;
+  top: 18.2875cqw;
+  width: 72.8283cqw;
+  height: 10.8465cqw;
+}
+
+.logo-mark {
+  left: 48.6542cqw;
+  top: 15.07cqw;
+  width: 16.5561cqw;
+  height: 13.8978cqw;
+}
+
+.welcome-text {
+  left: 0;
+  top: 33.6667cqw;
+  z-index: 4;
+  display: flex;
+  width: 100cqw;
+  height: 4cqw;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  font-size: 2.9167cqw;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow:
+    0 0 2px #ffffff,
+    0 0 6px #ffffff,
+    0 0 14px #4515f4,
+    0 0 30px #4515f4,
+    0 0 52px rgba(69, 21, 244, 0.95),
+    0 0 82px rgba(69, 21, 244, 0.72),
+    0 0 118px rgba(69, 21, 244, 0.52);
+}
+
+.welcome-text::before {
+  position: absolute;
+  inset: -1.15cqw 0 0;
+  z-index: -1;
+  color: #4515f4;
+  content: "Добро пожаловать в кибер-клуб!";
+  filter: blur(0.85cqw);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.order-hitbox {
+  left: 12.5833cqw;
+  top: 38cqw;
+  z-index: 5;
+  display: flex;
+  width: 74.8333cqw;
+  height: 6.3333cqw;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+.order-hitbox::before {
+  position: absolute;
+  inset: 0;
+  border-radius: 2cqw;
+  background: radial-gradient(ellipse at center, rgba(92, 255, 247, 0.32) 0%, rgba(48, 235, 255, 0.15) 44%, rgba(48, 235, 255, 0) 72%);
+  content: "";
+  opacity: 0;
+  transition: opacity 60ms linear;
+  will-change: opacity;
+}
+
+.order-hitbox:focus-visible {
+  outline: max(2px, 0.1667cqw) solid rgba(255, 255, 255, 0.9);
+  outline-offset: 0.6667cqw;
+  border-radius: 1.5cqw;
+}
+
+.cta-text {
+  display: block;
+  color: #ffffff;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  font-size: 3.25cqw;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow:
+    0 0 2px #ffffff,
+    0 0 7px rgba(92, 255, 247, 0.95),
+    0 0 18px rgba(48, 235, 255, 0.85),
+    0 0 34px rgba(79, 129, 255, 0.55);
+  position: relative;
+}
+
+.logo-word img,
+.logo-mark img,
+.food-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.food-icon img,
+.cta-text {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.food-icon {
+  z-index: 6;
+  width: 9.4469cqw;
+  height: 9.4469cqw;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+.food-icon::before {
+  position: absolute;
+  inset: 9%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.48) 0%, rgba(82, 241, 255, 0.34) 42%, rgba(82, 241, 255, 0) 72%);
+  content: "";
+  opacity: 0;
+  transition: opacity 60ms linear;
+  will-change: opacity;
+}
+
+.food-icon:focus-visible {
+  outline: max(2px, 0.1667cqw) solid rgba(255, 255, 255, 0.9);
+  outline-offset: 0.35cqw;
+  border-radius: 50%;
+}
+
+.icon-ragu {
+  left: 24.4583cqw;
+  top: 43.575cqw;
+}
+
+.icon-ramen {
+  left: 31.39cqw;
+  top: 43.6158cqw;
+  width: 9.3636cqw;
+  height: 9.3636cqw;
+}
+
+.icon-cake {
+  left: 38.3067cqw;
+  top: 43.6158cqw;
+  width: 9.3636cqw;
+  height: 9.3636cqw;
+}
+
+.icon-dessert {
+  left: 45.2233cqw;
+  top: 43.6667cqw;
+  width: 9.3636cqw;
+  height: 9.3636cqw;
+}
+
+.icon-tea {
+  left: 52.14cqw;
+  top: 43.6158cqw;
+  width: 9.3636cqw;
+  height: 9.3636cqw;
+}
+
+.icon-coffee {
+  left: 59.0575cqw;
+  top: 43.6167cqw;
+  width: 9.411cqw;
+  height: 9.411cqw;
+}
+
+.icon-lemonade {
+  left: 66.0567cqw;
+  top: 43.6683cqw;
+  width: 9.3636cqw;
+  height: 9.3636cqw;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .order-hitbox:hover::before {
+    opacity: 1;
+  }
+
+  .food-icon:hover::before {
+    opacity: 1;
+  }
+}
